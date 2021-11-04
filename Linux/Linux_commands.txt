@@ -1,0 +1,38 @@
+sudo docker container list -a
+
+sudo docker start elated_ellis
+
+sudo docker attach elated_ellis
+
+# filebeat config file
+curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
+
+# metricbeat config file
+curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat > /etc/ansible/files/metricbeat-config.yml
+
+# edit /etc/ansible/hosts
+
+nano /etc/ansible/hosts
+
+[webservers]
+10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+
+[elk]
+10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+
+# use nano -l to edit the filebeat and metricbeat files since you have to locate lines containing the host IP
+
+nano -l filebeat-config.yml
+
+1105    hosts: ["10.1.0.4:9200"]
+
+1804 setup.kibana:
+1805   host: "10.1.0.4:5601" # TODO: Change this to the IP address of your ELK server\
+
+nano -l metricbeat-config.yml
+
+61 setup.kibana:
+62   host: "10.1.0.4:5601"
+
+95   hosts: ["10.1.0.4:9200"]
