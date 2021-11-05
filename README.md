@@ -5,7 +5,7 @@ Building a virtual network in Azure
 
 The files in this repository were used to configure the network depicted below.
 
-[https://github.com/hrymic/MH_Project_1/tree/main/Diagrams]
+[https://github.com/hrymic/MH_Project_1/blob/main/Diagrams/VNet_Diagram.drawio.png]
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _.yml_ file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -56,7 +56,7 @@ The machines on the internal network are not exposed to the public Internet.
 Only the _ELK_ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _TODO: Add whitelisted IP addresses_
 
-50.39.161.198
+---50.39.161.198
 
 Machines within the network can only be accessed by _the Jump Box_.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
