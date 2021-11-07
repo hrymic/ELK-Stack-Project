@@ -1,0 +1,2 @@
+The player and dealer believed to be scamming the Lucky Duck are player Mylie Schmidt and dealer Billy Jones
+If you look at the file Roulette_Losses and grep Mylie you will see her name on each major loss. The times at each major loss correlates with the times found in the file Dealers_working_during_loses where Billy Jones is the dealer.
