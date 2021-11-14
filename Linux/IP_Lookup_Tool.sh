@@ -19,8 +19,6 @@
  # user input required to open Google Maps
      echo "Type the following coordinates then hit Enter"
      cat $1/$1_coordinates.txt
- ### If iplookup.sh is in your home directory, uncomment below
-     #cat $1_coordinates.txt
      read coordinates
      echo "Looking up $coordinates"
      firefox https://www.google.com/maps/@$coordinates,14z
