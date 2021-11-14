@@ -21,4 +21,4 @@
      cat $1/$1_coordinates.txt
      read coordinates
      echo "Looking up $coordinates"
-     firefox https://www.google.com/maps/@$coordinates,14z
+     firefox https://www.google.com/maps/@"$coordinates",14z
