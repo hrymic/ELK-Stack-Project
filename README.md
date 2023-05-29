@@ -1,4 +1,4 @@
-# MH_Project_1
+# ELK Stack Project
 Building a virtual network in Azure
 
 ## Automated ELK Stack Deployment
